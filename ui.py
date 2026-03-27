@@ -16,7 +16,7 @@ if st.button("Predict"):
         st.warning("Please enter an issue first")
 
     else:
-       with st.spinner("Processing..."):
+           with st.spinner("Processing..."):
     try:
         response = requests.post(
             API_URL,
