@@ -16,23 +16,27 @@ if st.button("Predict"):
         st.warning("Please enter an issue first")
 
     else:
-        with st.spinner("Processing..."):
-            try:
-                response = requests.post(
-                    API_URL,
-                    json={"text": text},
-                    timeout=60
-                )
+       with st.spinner("Processing..."):
+    try:
+        response = requests.post(
+            API_URL,
+            json={"text": text},
+            timeout=60
+        )
 
-                response.raise_for_status()
-                data = response.json()
+        response.raise_for_status()
+        data = response.json()
 
-                st.markdown("### 🎯 Prediction Result")
+        # 👇 YEH SAB TRY KE ANDAR HI RAHEGA
+        st.markdown("### 🎯 Prediction Result")
 
-                col1, col2 = st.columns(2)
+        col1, col2 = st.columns(2)
 
-                with col1:
-                st.success(f"📂 Category\n\n**{data['category']}**")
+        with col1:
+            st.success(f"📂 Category\n\n**{data['category']}**")
 
-                with col2:
-                st.info(f"⚡ Priority\n\n**{data['priority']}**")
+        with col2:
+            st.info(f"⚡ Priority\n\n**{data['priority']}**")
+
+    except Exception as e:
+        st.error(f"Error: {e}")
