@@ -5,14 +5,15 @@ API_URL = "https://nlp-ticket-classifier.onrender.com/predict"
 
 st.title("🎫 Ticket Classifier")
 
+def clear_text():
+    st.session_state.text = ""
+
 if "text" not in st.session_state:
     st.session_state.text = ""
 
 text = st.text_input("Enter your issue:", key="text")
 
-if st.button("Clear"):
-    st.session_state.text = ""
-    st.rerun()
+st.button("Clear", on_click=clear_text)
 
 if st.button("Predict"):
     if not text.strip():
