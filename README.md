@@ -78,12 +78,12 @@ pip install -r requirements.txt
 ---
 ## 🚀 Future Improvements
 
-- Improve model accuracy using a larger dataset  
-- Try advanced models (Logistic Regression, Random Forest, BERT)  
-- Add evaluation metrics (accuracy, confusion matrix)  
-- Deploy the application on cloud (Render / AWS)  
-- Replace rule-based priority with ML-based prediction  
-- Enhance UI/UX for better user experience
+- Improve model accuracy using a larger and more diverse dataset  
+- Try advanced models such as Random Forest or transformer-based models (BERT)  
+- Add proper evaluation metrics (accuracy, precision, recall, confusion matrix)  
+- Replace rule-based priority system with a machine learning-based approach  
+- Deploy the full system (FastAPI + Streamlit) on cloud platforms  
+- Improve UI/UX for better user experience  
 ---
 ## 👨‍💻 Author
 **Shashwat Singh**  
