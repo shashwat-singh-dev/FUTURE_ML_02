@@ -51,3 +51,13 @@ The goal of this project is to build an automated NLP-based system that can clas
 ### 1️⃣ Install dependencies
 ```bash
 pip install -r requirements.txt
+```
+## 👨‍💻 Author
+**Shashwat Singh**  
+B.Tech (3rd Year) | Data Analyst | Machine Learning  
+
+---
+
+## 🔗 Connect with Me
+- LinkedIn: *((https://www.linkedin.com/in/shashwat-singh-aa83022a1/))*
+- Email: shashwat3210dl@gmail.com 
