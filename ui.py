@@ -47,10 +47,10 @@ st.markdown("")
 col1, col2 = st.columns([1,1])
 
 with col1:
-    st.button("🧹 Clear", on_click=clear_text)
+    st.button("Clear", on_click=clear_text)
 
 with col2:
-    predict = st.button("🚀 Predict")
+    predict = st.button("Predict")
 
 # --------------------------
 # RESULT
