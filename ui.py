@@ -17,10 +17,10 @@ text = st.text_input("Enter your issue:", key="text")
 st.markdown("### 💡 Try sample issues:")
 
 samples = [
-"Payment issue"
-"App crash"
-"Reset password"
-"Account hacked"
+"Payment issue",
+"App crash",
+"Reset password",
+"Account hacked",
 "Slow app"
 ]
 
