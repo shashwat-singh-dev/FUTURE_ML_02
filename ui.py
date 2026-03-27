@@ -8,7 +8,11 @@ st.title("🎫 Ticket Classifier")
 text = st.text_input("Enter your issue:")
 
 if st.button("Predict"):
-    if text:
+
+    if not text.strip():
+        st.warning("Please enter an issue first")
+
+    else:
         with st.spinner("Processing..."):
             try:
                 response = requests.post(
