@@ -44,13 +44,16 @@ for i, sample in enumerate(samples):
 # --------------------------
 st.markdown("")
 
-col1, col2 = st.columns([1,1])
-
-with col1:
-    st.button("Clear", on_click=clear_text)
+col1, col2, col3 = st.columns([3,2,3])
 
 with col2:
-    predict = st.button("Predict")
+    b1, b2 = st.columns(2)
+
+    with b1:
+        st.button("Clear", on_click=clear_text, use_container_width=True)
+
+    with b2:
+        predict = st.button("Predict", use_container_width=True)
 
 # --------------------------
 # RESULT
