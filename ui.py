@@ -3,7 +3,7 @@ import requests
 
 API_URL = "https://nlp-ticket-classifier.onrender.com/predict"
 
-st.title("🎫 Ticket Classifier")
+st.markdown("<h1 style='text-align: center; margin-bottom: 10px;'>🎫 Ticket Classifier</h1>", unsafe_allow_html=True)
 
 def clear_text():
     st.session_state.text = ""
