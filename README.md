@@ -23,6 +23,9 @@ The goal of this project is to build an automated NLP-based system that can clas
 - End-to-end ML pipeline implementation
 
 ---
+## 🎯 Demo
+
+![App Demo](demo.png)
 
 ## 🛠️ Tech Stack
 
