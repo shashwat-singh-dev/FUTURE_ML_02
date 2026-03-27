@@ -7,6 +7,8 @@ st.title("🎫 Ticket Classifier")
 
 def clear_text():
     st.session_state.text = ""
+def set_sample(sample):
+    st.session_state.text = sample
 
 if "text" not in st.session_state:
     st.session_state.text = ""
@@ -25,8 +27,11 @@ samples = [
 cols = st.columns(len(samples))
 
 for i, sample in enumerate(samples):
-    if cols[i].button(sample):
-        st.session_state.text = sample
+    cols[i].button(
+        sample,
+        on_click=set_sample,
+        args=(sample,)
+    )
 
 st.button("Clear", on_click=clear_text)
 
