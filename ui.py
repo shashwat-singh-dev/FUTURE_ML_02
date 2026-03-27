@@ -27,8 +27,12 @@ if st.button("Predict"):
                 response.raise_for_status()
                 data = response.json()
 
-                st.success(f"Category: {data['category']}")
-                st.info(f"Priority: {data['priority']}")
+                st.markdown("### 🎯 Prediction Result")
 
-            except Exception as e:
-                st.error(f"Error: {e}")
+                col1, col2 = st.columns(2)
+
+                with col1:
+                st.success(f"📂 Category\n\n**{data['category']}**")
+
+                with col2:
+                st.info(f"⚡ Priority\n\n**{data['priority']}**")
