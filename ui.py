@@ -1,19 +1,26 @@
 import streamlit as st
 import requests
 
+API_URL = "https://nlp-ticket-classifier.onrender.com/predict"
+
 st.title("🎫 Ticket Classifier")
 
 text = st.text_input("Enter your issue:")
 
 if st.button("Predict"):
     if text:
-        response = requests.get(f"http://127.0.0.1:8000/predict?text={text}")
-        
-        if response.status_code == 200:
+        try:
+            response = requests.post(
+                API_URL,
+                json={"text": text},
+                timeout=60
+            )
+
+            response.raise_for_status()
             data = response.json()
+
             st.success(f"Category: {data['category']}")
             st.info(f"Priority: {data['priority']}")
-        else:
-            st.error("Error in API")
-    else:
-        st.warning("Please enter some text")
+
+        except Exception as e:
+            st.error(f"Error: {e}")
