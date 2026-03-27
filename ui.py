@@ -29,15 +29,16 @@ samples = [
     "Slow app"
 ]
 
-row1 = st.columns(3)
-row2 = st.columns(2)
+cols = st.columns(5)
 
-for i, sample in enumerate(samples[:3]):
-    row1[i].button(sample, on_click=set_sample, args=(sample,))
-
-for i, sample in enumerate(samples[3:]):
-    row2[i].button(sample, on_click=set_sample, args=(sample,))
-
+for i, sample in enumerate(samples):
+    with cols[i]:
+        st.button(
+            sample,
+            on_click=set_sample,
+            args=(sample,),
+            use_container_width=True
+        )
 # --------------------------
 # BUTTONS
 # --------------------------
