@@ -17,11 +17,11 @@ text = st.text_input("Enter your issue:", key="text")
 st.markdown("### 💡 Try sample issues:")
 
 samples = [
-    "payment not working",
-    "app crashes on login",
-    "unable to reset password",
-    "account hacked please help",
-    "slow performance issue"
+"Payment issue"
+"App crash"
+"Reset password"
+"Account hacked"
+"Slow app"
 ]
 
 cols = st.columns(len(samples))
